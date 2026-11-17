@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Movie Quotes</title>
+    <link rel="stylesheet" href="style-quotes.css">
+</head>
+<body>
+
+    <h1>Random Movie Quotes</h1>
+
+    <button id="get-quotes">Say The Line!</button>
+    <div id="quotes"></div>
+
+   <script>
+
+    let getQuotes = document.getElementById("get-quotes")
+    let quotes = document.getElementById("quotes")
+    let quotesList;
+
+    async function fetchGreetings() {
+
+        const response = await fetch ("quotes.json")
+        console.log(response);
+
+        const data = await response.json();
+        console.log(data);
+
+        quotesList = data["movie quotes"];
+        console.log(quotesList);
+
+    }
+
+    fetchGreetings();
+
+    getQuotes.addEventListener("click", () => {
+        let randomIndex = Math.floor(Math.random() * quotesList.length);
+        quotes.innerHTML = quotesList[randomIndex];
+    });
+
+    </script>
+    </body>
+</html>
+        
+    

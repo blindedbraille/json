@@ -1,0 +1,33 @@
+
+body {
+        background-color: #151515;
+        color: white;
+        font-family: Arial, sans-serif;
+        text-align: center;
+        padding: 60px 20px;
+    }
+
+    h1 {
+        margin-bottom: 30px;
+    }
+
+    button {
+        background-color: #c62828;
+        color: white;
+        border: none;
+        padding: 12px 24px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #e53935;
+    }
+
+    #quotes {
+        margin-top: 30px;
+        font-size: 22px;
+        font-style: italic;
+        line-height: 1.5;
+        color:gold
+    }
